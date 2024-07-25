@@ -1,9 +1,8 @@
-package com.cloudairlines.flight;
+package com.cloudairlines1.flight;
 
-import com.cloudairlines.airport.Airport;
+import com.cloudairlines1.airport.Airport;
 
 public class Flight {
-
 
     private Airport fromAirport;
     private Airport toAirport;

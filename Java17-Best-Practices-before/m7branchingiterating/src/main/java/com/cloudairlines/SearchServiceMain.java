@@ -1,7 +1,6 @@
 package com.cloudairlines;
 
 
-import com.cloudairlines.airport.AirportStore;
 import com.cloudairlines.flight.Flight;
 import com.cloudairlines.flight.FlightSearch;
 import com.cloudairlines.passenger.SearchRequest;

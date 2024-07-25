@@ -1,4 +1,4 @@
-package com.cloudairlines.passenger;
+package com.cloudairlines1.passenger;
 
 public class Passenger {
 

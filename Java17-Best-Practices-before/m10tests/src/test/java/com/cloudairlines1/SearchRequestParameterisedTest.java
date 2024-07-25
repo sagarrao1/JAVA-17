@@ -1,6 +1,6 @@
-package com.cloudairlines;
+package com.cloudairlines1;
 
-import com.cloudairlines.flight.SearchRequest;
+import com.cloudairlines1.flight.SearchRequest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -11,8 +11,6 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.List;
 import java.util.stream.Stream;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SearchRequestParameterisedTest {
 
@@ -71,7 +69,7 @@ class SearchRequestParameterisedTest {
     //   Using getInvalidDates testData from TestDataUtils class in different package
 //    Reusable from Utils package
     @ParameterizedTest
-    @MethodSource("com.cloudairlines.utils.TestDataUtils#getInvalidDates")
+    @MethodSource("com.cloudairlines1.utils.TestDataUtils#getInvalidDates")
     public void searchRejectsInvalidDateFormat3(String invalidDate) {
         Assertions.assertThrows(IllegalArgumentException.class,
                 () -> new SearchRequest("London", "New York", invalidDate));

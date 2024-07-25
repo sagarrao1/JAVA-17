@@ -2,13 +2,16 @@ package com.cloudairlines.flight;
 
 import com.cloudairlines.passenger.Passenger;
 import com.cloudairlines.passenger.SeatClass;
+
 import java.util.List;
+
 import static com.cloudairlines.airport.AirportStore.*;
+
 
 public class FlightStoreImpl implements FlightStore {
 
+    @Override
     public List<Flight> getFlights() {
-
         return List.of(
                 new Flight(LONDON_GATWICK, NEW_YORK_JFK, "2022-10-15", PASSENGER_LIST),
                 new Flight(LONDON_GATWICK, NEW_YORK_JFK, "2022-11-15", PASSENGER_LIST),
@@ -23,4 +26,5 @@ public class FlightStoreImpl implements FlightStore {
             new Passenger("Brown",SeatClass.FIRST),
             new Passenger("Evans",SeatClass.BUSINESS)
     );
+
 }

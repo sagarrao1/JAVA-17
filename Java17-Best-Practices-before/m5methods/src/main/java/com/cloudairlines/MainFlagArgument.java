@@ -2,9 +2,7 @@ package com.cloudairlines;
 
 import com.cloudairlines.flight.Flight;
 import com.cloudairlines.flight.FlightStoreImpl;
-import com.cloudairlines.passenger.Passenger;
-import com.cloudairlines.passenger.PassengerSearch;
-import com.cloudairlines.passenger.SeatClass;
+import com.cloudairlines.passenger.*;
 
 public class MainFlagArgument {
     public static void main(String[] args) {

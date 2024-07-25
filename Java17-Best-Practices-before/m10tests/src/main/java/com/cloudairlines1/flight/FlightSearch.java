@@ -1,16 +1,15 @@
-package com.cloudairlines.flight;
+package com.cloudairlines1.flight;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class FlightSearch {
 
     private FlightStore flightStore;
 
     public FlightSearch(FlightStore store) {
-        this.flightStore = Objects.requireNonNull(store);
+        this.flightStore = store;
     }
 
     public static FlightSearch newSearch() {

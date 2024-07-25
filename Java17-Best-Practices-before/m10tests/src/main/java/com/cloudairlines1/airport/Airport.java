@@ -1,7 +1,8 @@
-package com.cloudairlines.airport;
+package com.cloudairlines1.airport;
 
 import java.util.List;
 
 public record Airport(String country, String city, String name, List<Integer> terminals) {
+
 
 }

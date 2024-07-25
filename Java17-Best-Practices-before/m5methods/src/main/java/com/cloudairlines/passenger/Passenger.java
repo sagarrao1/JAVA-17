@@ -1,6 +1,7 @@
 package com.cloudairlines.passenger;
 
 public class Passenger {
+    
     String surname;
     SeatClass seatClass;
 

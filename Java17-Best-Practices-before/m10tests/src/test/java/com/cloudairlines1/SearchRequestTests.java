@@ -1,10 +1,9 @@
-package com.cloudairlines;
+package com.cloudairlines1;
 
-import com.cloudairlines.flight.FlightSearch;
-import com.cloudairlines.flight.SearchRequest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import com.cloudairlines1.flight.*;
 
 public class SearchRequestTests {
 
