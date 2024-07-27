@@ -17,6 +17,7 @@
         <module>m8exceptions</module>
         <module>m10tests</module>
         <module>m9comments</module>
+        <module>DateTime</module>
     </modules>
 
     <properties>
