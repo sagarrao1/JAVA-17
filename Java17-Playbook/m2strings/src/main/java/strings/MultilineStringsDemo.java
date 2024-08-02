@@ -5,9 +5,9 @@ public class MultilineStringsDemo {
     public static void main(String[] args) {
 
         String str = """
-                To whom it may concern
+                 To whom it may concern
                 I wish you a good day
-                Sincerely
+                 Sincerely
                 Me""";
 
 

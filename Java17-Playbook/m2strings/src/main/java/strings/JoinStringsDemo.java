@@ -19,24 +19,21 @@ public class JoinStringsDemo {
     }
 
     public static String joinOldWay(String delimiter, String... args) {
-
         StringBuilder result = new StringBuilder();
-
         int i;
         for (i = 0; i < args.length - 1; i++) {
             result.append(args[i]).append(delimiter);
         }
-
         result.append(args[i]);
         return result.toString();
     }
 
-
     public static String joinSimplest(String delimiter, String... args) {
-        return "[" + String.join(delimiter, args) + "]";
+        return String.join(delimiter,args);
+//        return "["+ String.join(delimiter,args)+ "]";
     }
 
-
+//    we are using StringJoiner class. it is like String builder
     public static String joinWithJoiner(String delimiter, String... args) {
         var joiner = new StringJoiner(delimiter, "{", "}");
         for(String arg : args) {
@@ -45,11 +42,13 @@ public class JoinStringsDemo {
         return joiner.toString();
     }
 
+//    with streams, we can filter values like null here
     public static String joinWithStream(String delimiter, String... args) {
         return Stream.of(args)
-                .filter(Objects::nonNull)
-                .filter(s -> !s.isEmpty())
-                .collect(Collectors.joining(delimiter));
+//                     .filter(s -> s !=null)  // we can use Lambda or java (Objects::nonNull) to check null
+                     .filter(Objects::nonNull)
+                     .filter(s -> !s.isEmpty())
+                     .collect(Collectors.joining(delimiter));
     }
 
 

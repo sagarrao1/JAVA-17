@@ -20,15 +20,18 @@ public class IterateOverCharactersDemo {
         System.out.println(charToUpperCase(str, 'g'));
     }
 
-
     // uppercase -> uPPercase
+//    we need to take StringBuilder here performance wise as String is immutable
     private static String charToUpperCase(String str, char charToUpper) {
-        var sb = new StringBuilder();
-        for(char c : str.toCharArray()) {
+        StringBuilder sb = new StringBuilder();
+        for (char c : str.toCharArray()) {
             char charToAppend = c == charToUpper ? Character.toUpperCase(c) : c;
             sb.append(charToAppend);
         }
         return sb.toString();
     }
+
+
+
 
 }
