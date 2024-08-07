@@ -8,7 +8,7 @@ public class SortingSimple {
 
     public static void main(String[] args) {
 
-        List<Integer> ints = new ArrayList<>(List.of(20, 50, 10));
+        List<Integer> ints = new ArrayList<>(List.of(50,40,20));
         ints.sort(Integer::compareTo);
         System.out.println(ints);
 
@@ -18,7 +18,6 @@ public class SortingSimple {
 
 
         List<String> strings = new ArrayList<>(List.of("andre", "maria", "Andre"));
-        strings.sort(String::compareTo);
         System.out.println(strings);
 
 

@@ -29,15 +29,13 @@ public class ConvertToFromArray {
         Integer[] integerArr = {1, 2, 3};
         List<Integer> intList = Arrays.asList(integerArr);
 
-
-
-
         int[] ints = {1, 2, 3, 4, 5};
         List<Integer> intList2 = Arrays.stream(ints)
                 .filter( n -> n < 4)
                 .boxed()
                 .toList();
 
+//        you can't modify streams once done
         intList2.add(100);
     }
 }

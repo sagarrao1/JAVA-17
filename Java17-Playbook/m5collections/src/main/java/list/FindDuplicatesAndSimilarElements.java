@@ -14,7 +14,7 @@ public class FindDuplicatesAndSimilarElements {
         List<String> listTwo = List.of("USA", "Brazil", "Germany", "Australia");
 
         Set<String> similar = new HashSet<>(listOne);
-        similar.retainAll(listTwo);
+        similar.retainAll(listTwo);  // intersection of both lists
         System.out.println(similar);
 
 

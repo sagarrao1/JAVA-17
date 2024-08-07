@@ -14,7 +14,7 @@ import java.util.Map;
  */
 public class GetAllZoneIds {
 
-    public static final boolean SORT_BY_REGION = true;
+    public static final boolean SORT_BY_REGION = false;
 
     public static void main(String[] args) {
 

@@ -11,8 +11,8 @@ public class ConvertOldDateDemo {
 
         Date in = new Date(); // from an external API
 
-        LocalDateTime ldt = LocalDateTime.ofInstant(in.toInstant(), ZoneId.systemDefault());
-        LocalDateTime ldt2 = LocalDateTime.ofInstant(in.toInstant(), ZoneId.of("America/New_York"));
+        LocalDateTime ldt = LocalDateTime.ofInstant(in.toInstant(),ZoneId.systemDefault());
+        LocalDateTime ldt2 = LocalDateTime.ofInstant(in.toInstant(),ZoneId.of("America/New_York"));
 
         Date out = Date.from(ldt.atZone(ZoneId.systemDefault()).toInstant());
 

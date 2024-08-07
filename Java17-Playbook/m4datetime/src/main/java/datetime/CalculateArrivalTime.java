@@ -34,7 +34,7 @@ public class CalculateArrivalTime {
         System.out.println(new Flight("Europe/Berlin", "Asia/Dubai", departure, 4));
 
     }
-
+//    record: data only specialized class. it implicitly creates all getters,setters, boiler plate code
     public record Flight(String from, String to, LocalDateTime departure, int duration) {
 
         @Override

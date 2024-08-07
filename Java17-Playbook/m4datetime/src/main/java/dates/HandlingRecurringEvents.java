@@ -11,23 +11,23 @@ public class HandlingRecurringEvents {
     public static void main(String[] args) {
 
         // Task - meeting every Friday. Print all meetings for the month
-        var today = LocalDate.now();
-        var start = today.with(TemporalAdjusters.firstDayOfMonth());
-        var stop = today.with(TemporalAdjusters.lastDayOfYear());
 
-        var firstFriday = start.with(TemporalAdjusters.nextOrSame(DayOfWeek.MONDAY));
+        LocalDate date = LocalDate.now();
+        LocalDate startDate= date.with(TemporalAdjusters.firstDayOfMonth());
+        LocalDate endDate = date.with(TemporalAdjusters.lastDayOfMonth());
 
-        System.out.println("Start date " + start);
-        System.out.println("End date " + stop);
+        System.out.println("Start date " + startDate);
+        System.out.println("End date " + endDate);
+
+        LocalDate firstFriday = startDate.with(TemporalAdjusters.nextOrSame(DayOfWeek.FRIDAY));
 
         List<LocalDate> fridays = new ArrayList<>();
-
-        while(firstFriday.isBefore(stop) || firstFriday.isEqual(stop)) {
+        while (firstFriday.isBefore(endDate) || firstFriday.isEqual(endDate)){
             fridays.add(firstFriday);
-            firstFriday = firstFriday.plusWeeks(1); // move to the next Friday
+            firstFriday = firstFriday.plusWeeks(1);
         }
 
-        System.out.printf("From %s to %s, Fridays will be on %s%n", start, stop, fridays);
+        System.out.printf("From %s to %s, Fridays will be on %s%n", startDate, endDate, fridays);
 
     }
 }

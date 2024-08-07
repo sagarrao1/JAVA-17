@@ -33,10 +33,10 @@ public class ReplaceElementInAList {
 
 
         List<String> strings = new ArrayList<>(List.of("mary", "jake", "thomas"));
-        strings.replaceAll(str -> str.substring(0, 1).toUpperCase() + str.substring(1));
+        strings.replaceAll(s -> s.substring(0,1).toUpperCase()+s.substring(1));
         System.out.println(strings);
 
-
+//        another way using map
         List<String> newList = strings.stream()
                 .map(str -> str.substring(0, 1).toUpperCase() + str.substring(1))
                 .toList();

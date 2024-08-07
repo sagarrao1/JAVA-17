@@ -7,11 +7,11 @@ public class DifferenceBetweenDatesDemo {
 
     public static void main(String[] args) {
 
-        LocalDate start = LocalDate.of(2010, 11, 2);
+        LocalDate start = LocalDate.of(1981, 3, 4);
         LocalDate today = LocalDate.now();
 
         Period age = Period.between(start, today);
-
+//        System.out.println(age.toString());
         // example: 13 months
         System.out.println(age.getYears() + "y "    // == 1 (12 months)
                 + age.getMonths() + "m "            // == 1

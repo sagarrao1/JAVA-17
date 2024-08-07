@@ -8,6 +8,7 @@ public class AddElementToArray {
 
         String[] arr = { "1", "2", "3" };
         arr[2] = "10";
+//        arr[3] ="100";  //ArrayIndexOutOfBoundsException
 
         System.out.println(Arrays.toString(arr));
         String[] arr2 = append(arr, "4");

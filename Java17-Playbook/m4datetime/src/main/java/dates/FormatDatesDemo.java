@@ -13,20 +13,18 @@ public class FormatDatesDemo {
 
         var date = LocalDateTime.now();
         System.out.println(date);
-
         var isoDate = DateTimeFormatter.ISO_DATE.format(date);
         System.out.println(isoDate);
 
         var basicIsoDate = DateTimeFormatter.BASIC_ISO_DATE.format(date);
         System.out.println(basicIsoDate);
 
-        var someDate = DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).format(date);
+//        2nd way of creating date formats
+        var someDate=DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).format(date);
         System.out.println(someDate);
 
-        var someDate2 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT).format(date);
-        System.out.println(someDate2);
-
-
+        var someDate2 =DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT).format(date);
+        System.out.println("someDate2: "+someDate2);
 
         var someDate3 = DateTimeFormatter
                 .ofLocalizedDate(FormatStyle.SHORT).withLocale(new Locale("en", "US"))

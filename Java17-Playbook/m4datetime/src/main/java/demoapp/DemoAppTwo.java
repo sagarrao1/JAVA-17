@@ -21,7 +21,9 @@ public class DemoAppTwo {
 
     static void printTimes(LocalTime time, List<String> otherZoneIDs) {
 
-        ZonedDateTime dateTime = time.atDate(LocalDate.now()).atZone(ZoneId.systemDefault());
+        ZonedDateTime dateTime = time
+                                    .atDate(LocalDate.now())
+                                    .atZone(ZoneId.systemDefault());
 
         System.out.println(dateTime.getZone() + " " + dateTime.format(DateTimeFormatter.ISO_LOCAL_TIME));
 

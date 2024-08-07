@@ -14,14 +14,12 @@ public class HowToWriteFile {
     public static void main(String[] args) throws IOException {
 
         Files.writeString(Path.of(filePath), "some str\n");
-
 //        Files.writeString(Path.of(filePath), "another str\n", StandardOpenOption.CREATE_NEW);
 
         Files.writeString(Path.of(filePath), "some str 2\n", StandardOpenOption.APPEND);
 
-        Files.writeString(Path.of(String.format("m6io/src/main/resources/write_to_me-%s.txt",
-                Instant.now().toString().replace(":","-"))), "some str\n");
-
+        Files.writeString(Path.of(String.format("m6io/src/main/resources/write_to_me_%s.txt",
+                Instant.now().toString().replace(":","-"))),"Some sagar");
         Files.writeString(Path.of(filePath), "");
 
 
@@ -32,12 +30,13 @@ public class HowToWriteFile {
             Files.writeString(Path.of(filePath), string + System.lineSeparator(), StandardOpenOption.APPEND);
         }
 
-        // Yes
+        // Yes . we should use String builder for performance
         StringBuilder sb = new StringBuilder();
         for(String string : strings) {
-            sb.append(string).append(System.lineSeparator());
+           sb.append(string).append(System.lineSeparator());
         }
 
-        Files.writeString(Path.of(filePath), sb.toString(), StandardOpenOption.APPEND);
+        Files.writeString(Path.of(filePath), sb.toString(),StandardOpenOption.APPEND);
+
     }
 }
